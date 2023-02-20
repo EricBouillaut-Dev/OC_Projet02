@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet 2 formation OpenClassRoom</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
@@ -12,13 +13,39 @@
   </head>
   <body>
     <header>
+      <a href="#">
+        <img id="logo" src="./Images Booki/logo/Booki.png" alt="Logo Booki" />
+      </a>
       <nav>
         <ul>
-          <li></li>
+          <li><a href="#" class="nav-menu">Hébergements</a></li>
+          <li><a href="#" class="nav-menu">Activités</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+
+    <main>
+      <!-- Titre -->
+      <section>
+        <div>
+          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+          <p>En plein centre ville ou en pleine nature</p>
+        </div>
+        <!-- Formulaire recherche -->
+        <form method="post" action="index.php">
+          <div class="conteneur-formulaire border green">
+            <label class="centrer-flex border yellow" for="lieu"> </label>
+            <input id="lieu" type="search" value="Marseille, France" />
+          </div>
+
+          <div class="border green">
+            <button class="form-button border yellow" type="submit">
+              Rechercher
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
