@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projet 2 formation OpenClassRoom</title>
+    <title>Booki</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8c5af481df.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -26,24 +31,43 @@
 
     <main>
       <!-- Titre -->
-      <section>
+      <section class="section1">
         <div>
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre ville ou en pleine nature</p>
         </div>
-        <!-- Formulaire recherche -->
-        <form method="post" action="index.php">
-          <div class="conteneur-formulaire border green">
-            <label class="centrer-flex border yellow" for="lieu"> </label>
+        <form action="#">
+          <div class="i-location">
+            <i class="fa-solid fa-location-dot fa-lg"></i>
+          </div>
+          <div>
+            <label for="lieu"> </label>
             <input id="lieu" type="search" value="Marseille, France" />
           </div>
-
-          <div class="border green">
-            <button class="form-button border yellow" type="submit">
-              Rechercher
-            </button>
+          <div>
+            <button type="submit">Rechercher</button>
           </div>
         </form>
+
+        <div class="filters">
+          <h3>Filtres</h3>
+          <div class="btn-filter">
+            <p><i class="fa-solid fa-money-bill-wave fa-lg"></i>Économique</p>
+          </div>
+          <div class="btn-filter">
+            <p><i class="fa-solid fa-child-reaching fa-lg"></i>Familiale</p>
+          </div>
+          <div class="btn-filter">
+            <p><i class="fa-solid fa-heart fa-lg"></i>Romantique</p>
+          </div>
+          <div class="btn-filter">
+            <p><i class="fa-solid fa-dog fa-lg"></i>Animaux autorisés</p>
+          </div>
+        </div>
+        <div id="icon-info">
+          <i class="fa-solid fa-info fa-xs"></i>
+          <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
       </section>
     </main>
     <footer></footer>

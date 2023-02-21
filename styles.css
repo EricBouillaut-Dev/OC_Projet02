@@ -18,7 +18,8 @@
 html{
     --primaire:#0065FC;
     --secondaire: #DEEBFF;
-    --fond: #D9D9D9;
+    --fond: #F2F2F2;
+    --gris: #D9D9D9;
 }
 
 body{
@@ -41,10 +42,15 @@ nav ul li{
     justify-content: flex-end;
 }
 
-h1, p{
-    margin: 10px 0 10px 0;
-    font-size: 20px;
+section h1{ 
+    margin: 10px 0 0 0;
+    font-size: 1.35em;
 }
+
+section p{ 
+    margin: 10px 0 10px 0;
+}
+
 #logo {
     width: 60px;
     padding: 50px 0 50px 0;
@@ -68,65 +74,133 @@ h1, p{
     color: var(--primaire);
 }
 
-
-
-/* 
-
-li{
-    list-style-type: none;
-}
-
-.booki-logo{
-	display: flex;
-    padding: 40px 0 40px 0; 
-}
-
-
-
-.section-main-titre{
+.section1{
     display: flex;
     flex-direction: column;
+
 }
 
 
 form{
     display: flex;
-    height: 60px;
-}
+    padding: 5px 0 5px 0;
 
-.conteneur-formulaire{
-    display: flex; 
 }
-
-.conteneur-formulaire label{
-    width: 60px;
-    font-size: 22px;
-    border-radius: 20px 0 0 20px;
-    cursor: pointer;
-    background-color: #F2F2F2;
+.i-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    background-color: var(--fond);
+    border-radius: 14px 0 0 14px;
 }
-
-.conteneur-formulaire input[type='search']{
-    max-width: 300px;
-    min-width: 160px;
-    width: 100%;
-    padding: 20px;
+  
+form input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 235px;
+    border: 1px solid var(--fond);
+    font-size: 1em;
     font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border: 2px solid #F2F2F2;
+    padding: 15px;
+    
 }
 
 
-.form-button{
-    width: 100%;
-    height: 100%;
-    padding: 0 20px;
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--primaire);
     border: none;
-    border-radius: 0 20px 20px 0;
-    cursor: pointer;
     color: white;
-    background-color: #0065FC;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 16px;
+    cursor: pointer;
 }
- */
 
+form input:hover{
+    box-shadow: 1px 1px 1px var(--gris);
+}
+form button:hover {
+    box-shadow: 1px 1px 1px black;
+}
+
+
+.filters {
+    display: flex;
+    padding: 20px 0 20px 0;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 65%;
+ }
+
+
+.btn-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid var(--gris);
+    border-radius: 30px;
+    margin-right: 10px;
+    padding-right: 15px;
+    height: 46px;
+}
+
+.btn-filter:hover{
+    background-color: var(--secondaire);
+}
+  
+.btn-filter .fa-heart, .fa-dog, .fa-money-bill-wave, .fa-child-reaching { 
+    padding: 15px 5px 15px 15px;
+    margin-right: 5px;
+    color: var(--primaire);
+}
+
+
+#icon-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}  
+
+.fa-info{
+    border: 1px solid var(--gris);
+    border-radius: 50%;
+    margin-right: 10px;
+    color: var(--primaire);
+    padding: 10px;
+}
+
+/* @media (max-width: 768px) { 
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo {
+        padding: 20px 0 20px 0;
+    } 
+    nav{
+        display:flex
+    }
+    nav ul{
+        flex-grow: 1;
+    }
+    .nav-menu {
+        flex-grow: 1;
+        padding: 20px;
+        border-top: 0;
+        border-bottom: 3px solid transparent;
+    }
+    .nav-menu:hover {
+        border-bottom-color: var(--primaire);
+    }
+    
+}
+*/
