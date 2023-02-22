@@ -75,12 +75,15 @@ li{
     color: var(--primaire);
 }
 
-section h1{ 
+.titre-filtres{
+    padding: 0 10px 0 10px;
+}
+.titre-site{ 
     margin: 10px 0 0 0;
     font-size: 1.35em;
 }
 
-section p{ 
+.description{ 
     margin: 10px 0 10px 0;
 }
 
@@ -143,14 +146,18 @@ form button:hover {
 
 .filters {
     display: flex;
+    align-items: center;
+ }
+
+.bloc-filtres{
+    display: flex;
     padding: 20px 0 20px 0;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    width: 65%;
- }
-
-
+    width: 60%;
+    /* max-width: 60%; */
+}
 .btn-filter {
     display: flex;
     justify-content: center;
@@ -159,7 +166,7 @@ form button:hover {
     border: 2px solid var(--gris);
     border-radius: 30px;
     margin-right: 10px;
-    padding-right: 15px;
+    padding-right: 10px;
     height: 46px;
 }
 
@@ -188,6 +195,27 @@ form button:hover {
     padding: 10px;
 }
 
+@media (min-width: 993px) and (max-width: 1130px) { 
+    .bloc-filtres{
+        justify-content: flex-start;
+        width: 100%;
+        align-items: center;
+    }
+    
+
+}
+
+
+@media (max-width: 992px) { 
+    .bloc-filtres{
+        justify-content: flex-start;
+        width: 100%;
+        align-items: center;
+    }
+    
+
+}
+
  @media (max-width: 768px) { 
     .navbar {
         flex-direction: column;
@@ -214,5 +242,13 @@ form button:hover {
     .nav-elem:hover {
         border-bottom-color: var(--primaire);
     }
-    
+    .filters{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .bloc-filtres{
+        justify-content: flex-start;
+        padding: 0;
+        width: 60%;
+    }
 }
