@@ -125,7 +125,6 @@ form button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 135px;
     border-radius: 0 15px 15px 0;
     background-color: var(--primaire);
     border: none;
@@ -143,6 +142,9 @@ form button:hover {
     box-shadow: 1px 1px 1px black;
 }
 
+.fa-solid.fa-magnifying-glass {
+    display: none;  
+}
 
 .filters {
     display: flex;
@@ -195,6 +197,29 @@ form button:hover {
     padding: 10px;
 }
 
+.hebergements{
+    display:flex
+}
+.heberge-marseilles{
+    display: flex;
+    background-color: var(--fond);
+    border-radius: 15px ;
+    margin-right: 10px;
+}
+
+.populaires{
+    display: flex;
+    background-color: var(--fond);
+    border-radius: 15px ;
+    margin-left: 10px;
+}
+
+.bloc-img-heberge{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
 @media (min-width: 993px) and (max-width: 1130px) { 
     .bloc-filtres{
         justify-content: flex-start;
@@ -235,13 +260,27 @@ form button:hover {
 
     .nav-elem {
         flex-grow: 1;
-        padding: 20px ;
+        padding: 19px ;
         border-top: 0;
         border-bottom: 3px solid transparent;
     }
     .nav-elem:hover {
         border-bottom-color: var(--primaire);
     }
+
+    form button {
+        padding: 17px;
+    }
+    
+    .fa-solid.fa-magnifying-glass {
+        display: flex;
+    }   
+    
+    .search {
+        display: none;
+    }
+
+
     .filters{
         flex-direction: column;
         align-items: flex-start;
@@ -251,4 +290,5 @@ form button:hover {
         padding: 0;
         width: 60%;
     }
+
 }
