@@ -97,6 +97,7 @@ li{
 form{
     display: flex;
     padding: 5px 0 5px 0;
+    margin-bottom: 20px;
 
 }
 .i-location {
@@ -114,7 +115,7 @@ form input {
     align-items: center;
     width: 235px;
     border: 1px solid var(--fond);
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
     padding: 15px;
     
@@ -130,8 +131,8 @@ form button {
     border: none;
     color: white;
     font-weight: bold;
-    font-size: 1em;
-    padding: 16px;
+    font-size: 1.15em;
+    padding: 15px;
     cursor: pointer;
 }
 
@@ -148,6 +149,7 @@ form button:hover {
 
 .filters {
     display: flex;
+    margin-bottom: 25px;
 }
 
 .bloc-filtres{
@@ -156,7 +158,6 @@ form button:hover {
 }
 .grp-bloc{
     display: flex;
-    /* width: 100%; */
     flex-basis: 65%;
 }
 .bloc1, .bloc2{
@@ -196,7 +197,7 @@ form button:hover {
 #icon-info {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }  
 
 .fa-info{
@@ -263,7 +264,9 @@ div p, div h4{
 }
 
 article h3{
+    font-size: 1.3em;
     padding-left: 20px;
+    margin: 35px 15px;
 }
 
 .fa-star{
@@ -357,7 +360,7 @@ article h3{
     }
 
     form button {
-        padding: 17px;
+        font-size: 1.4em;
     }
     
     .fa-solid.fa-magnifying-glass {
