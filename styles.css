@@ -141,6 +141,9 @@ form input:hover{
 }
 form button:hover {
     box-shadow: 1px 1px 1px black;
+    /* transform: scale(1.01); */
+    /* transition: all 0.1s; */
+
 }
 
 .fa-solid.fa-magnifying-glass {
@@ -185,6 +188,8 @@ form button:hover {
 
 .btn-filter:hover{
     background-color: var(--secondaire);
+    /* transform: scale(1.02); */
+    /* transition: all 0.2s; */
 }
   
 .fa-heart, .fa-dog, .fa-money-bill-wave, .fa-child-reaching { 
@@ -249,6 +254,8 @@ form button:hover {
 }
 .card:hover {
     box-shadow: 0 0 6px var(--primaire);
+    /* transform: scale(1.02); */
+    /* transition: all 0.2s; */
     cursor: pointer;
 }
 
@@ -301,6 +308,8 @@ article h3{
 .card-popular:hover {
     box-shadow: 0 0 6px var(--primaire);
     cursor: pointer;
+    /* transform: scale(1.02); */
+    /* transition: all 0.2s; */
 }
 .card-popular img {
     object-fit: fill;
