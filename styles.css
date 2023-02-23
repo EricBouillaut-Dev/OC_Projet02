@@ -148,16 +148,23 @@ form button:hover {
 
 .filters {
     display: flex;
-    align-items: center;
- }
+}
 
 .bloc-filtres{
     display: flex;
-    padding: 20px 0 20px 0;
-    flex-flow: row wrap;
+    width: 100%;
+}
+.grp-bloc{
+    display: flex;
+    /* width: 100%; */
+    flex-basis: 65%;
+}
+.bloc1, .bloc2{
+    display: flex;
+    flex-grow: 1;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
+
 }
 .btn-filter {
     display: flex;
@@ -166,17 +173,20 @@ form button:hover {
     font-weight: bold;
     border: 2px solid var(--gris);
     border-radius: 30px;
-    margin-right: 10px;
-    padding-right: 10px;
+    margin-right: 2px;
     height: 46px;
     cursor: pointer;
+    padding-right: 6px;
+}
+.specify{
+    min-width: 150px;
 }
 
 .btn-filter:hover{
     background-color: var(--secondaire);
 }
   
-.btn-filter .fa-heart, .fa-dog, .fa-money-bill-wave, .fa-child-reaching { 
+.fa-heart, .fa-dog, .fa-money-bill-wave, .fa-child-reaching { 
     padding: 15px 5px 15px 15px;
     margin-right: 5px;
     color: var(--primaire);
@@ -219,9 +229,7 @@ form button:hover {
 .bloc-img-heberge {
     display: flex;
     flex-wrap: wrap;
-    /* gap: 10px; */
     justify-content: space-around;
-    /* max-width: 70%; */
  } 
 
 .card {
@@ -229,20 +237,16 @@ form button:hover {
     border-radius: 16px;
     padding: 5px;
     box-shadow: 0 0 8px var(--gris);
-    /* flex-grow: 1; */
     margin: 0 10px 10px 10px;
-    /* transition: all 0.2s; */
 }
 
 .card img {
     border-radius: 16px 16px 0 0;
     height: 115px;
     width: 240px;
-    /* object-fit: cover; */
-    /* object-fit: fill; */
+    object-fit: fill;
 }
 .card:hover {
-    /* transform: scale(1.02); */
     box-shadow: 0 0 6px var(--primaire);
     cursor: pointer;
 }
@@ -266,14 +270,51 @@ article h3{
     margin: 0;
     
 }
-@media (min-width: 993px) and (max-width: 1130px) { 
-    .bloc-filtres{
-        justify-content: flex-start;
-        width: 100%;
-        align-items: center;
-    }
-    
 
+.populaires {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fond);
+}
+.populaires h3 {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.popu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-popular {
+    display: flex;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 0 20px 20px 20px;
+    box-shadow: 0 0 8px var(--gris);
+}
+.card-popular:hover {
+    box-shadow: 0 0 6px var(--primaire);
+    cursor: pointer;
+}
+.card-popular img {
+    object-fit: fill;
+    border-radius: 16px 0 0 16px;
+    height: 135px;
+    width: 130px;
+}
+
+.card-contenu {
+    background-color: white;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.stars-bottom {
+    margin-top: auto;
 }
 
 
@@ -281,13 +322,14 @@ article h3{
     .bloc-filtres{
         justify-content: flex-start;
         width: 100%;
-        align-items: center;
     }
-    
+    .hebergements{
+        flex-direction: column;
 
+    }
 }
 
- @media (max-width: 768px) { 
+@media (max-width: 768px) { 
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -330,11 +372,48 @@ article h3{
     .filters{
         flex-direction: column;
         align-items: flex-start;
+        /* margin: 10px; */
+        /* width: 100%; */
+        /* flex-grow: 1; */
     }
     .bloc-filtres{
-        justify-content: flex-start;
-        padding: 0;
-        width: 60%;
+        /* justify-content: flex-start; */
+        /* padding: 0; */
+        /* flex-grow: 1; */
+        margin-left: 10px;
     }
+    .grp-bloc{
+        flex-direction: column;
+        /* width: 100%; */
+        flex-grow: 1;
+    }
+    .bloc1, .bloc2{
+        justify-content: flex-start;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+    .btn-filter{
+        flex-basis: 25%;
+        justify-content: flex-start;
+        margin: 5px;
+        padding-right: 30px;
+    }
+    .btn-filter p{
+        font-size: 0.65em;
+        margin: 0;
+        padding: 0;
+    }
+    .fa-heart, .fa-dog, .fa-money-bill-wave, .fa-child-reaching { 
+        padding: 0 10px 0 10px;
+        margin: 0;
+        
+    }
+    .hebergements{
+        flex-direction: column-reverse;
 
+    }
+    .specify{
+        min-width: 0;
+    }
+    
 }
