@@ -23,6 +23,7 @@ li{
     list-style-type: none;
 }
 
+/* Header */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -63,6 +64,7 @@ li{
     color: var(--primaire);
 }
 
+/* Filtres */
 .titre-filtres{
     padding-right: 10px;
 }
@@ -81,7 +83,7 @@ li{
 
 }
 
-
+/* Formulaire */
 form{
     display: flex;
     padding: 5px 0 5px 0;
@@ -165,7 +167,7 @@ form button:hover {
     font-weight: bold;
     border: 2px solid var(--gris);
     border-radius: 30px;
-    margin-right: 2px;
+    margin-right: 8px;
     height: 46px;
     cursor: pointer;
     padding-right: 6px;
@@ -201,6 +203,8 @@ form button:hover {
     padding: 10px;
 }
 
+/* Main */
+/* Hébergements */
 .bloc-section{
     display:flex;
     flex-direction: column;
@@ -220,17 +224,11 @@ form button:hover {
     margin-right: 10px;
 }
 
-.populaires{
-    display: flex;
-    background-color: var(--fond);
-    border-radius: 15px ;
-    margin-left: 10px;
-}
-
 .bloc-img-heberge {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 25px 25px 25px;
  } 
 
 .card {
@@ -238,7 +236,7 @@ form button:hover {
     border-radius: 16px;
     padding: 5px;
     box-shadow: 0 0 8px var(--gris);
-    margin: 0 10px 10px 10px;
+    margin: 10px 0 10px 0;
     box-shadow: 5px 3px 10px var(--gris);
 }
 
@@ -268,19 +266,25 @@ div p, div h4{
 
 article h3{
     font-size: 1.3em;
-    padding-left: 20px;
-    margin: 35px 15px;
+    margin: 30px 30px 15px 30px;
 }
 
+.activites h3{
+    padding-left: 0;
+    margin: 35px 0 15px 0;
+
+}
 .fa-star{
     margin: 0;
-    
 }
 
+/* Populaires */
 .populaires {
     display: flex;
     flex-direction: column;
     background-color: var(--fond);
+    border-radius: 15px ;
+    margin-left: 10px;
 }
 .populaires h3 {
     display: flex;
@@ -298,7 +302,7 @@ article h3{
     background-color: white;
     padding: 5px;
     border-radius: 15px;
-    margin: 0 20px 20px 20px;
+    margin: 25px;
     box-shadow: 5px 3px 10px var(--gris);
 }
 .card-popular:hover {
@@ -326,6 +330,7 @@ article h3{
     margin-top: auto;
 }
 
+/* Activités */
 .activites{
     display: flex;
     flex-direction: column;
@@ -334,8 +339,7 @@ article h3{
 .activ-list{
     display: flex;
     justify-content: space-between;
-    /* flex-grow: 1; */
-    /* width: 100%; */
+    flex-wrap: wrap;
 }
 
 .card-activ{
@@ -360,9 +364,11 @@ article h3{
 }
 .card-activ-contenu {
     display: flex;
+    flex-wrap: wrap;
     margin: 10px;
 }
 
+/* Footer */
 footer{
     display: flex;
     justify-content: space-between;
@@ -379,18 +385,48 @@ footer div h4{
     margin: 10px 0 10px 5px;
 }
 
-@media (max-width: 992px) { 
+/* Media queries */
+@media (min-width: 768px) and (max-width: 1024px) { 
     .bloc-filtres{
         justify-content: flex-start;
         width: 100%;
     }
-    .hebergements{
+    .bloc-articles{
         flex-direction: column;
 
     }
+
+    .populaires{
+        margin: 25px 0 0 0;
+        /* flex-direction: row; */
+    }
+    .popu-list{
+        flex-direction: row;
+    }
+    .card-popular img {
+        height: 140px;
+        width: 100px;
+        min-width: 100px;
+    }
+    .card-activ img{
+        height: 215px;
+        width: 190px;
+        min-width: 190px;
+        min-height: 215px;
+    }
+    .card-activ-contenu{
+        width: 160px;
+    }
+
 }
 
 @media (max-width: 768px) { 
+    main{
+        margin: 0;
+    }
+    .bloc-form-filtres{
+        margin: 0 25px 0 25px;
+    }
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -460,12 +496,68 @@ footer div h4{
         margin: 0;
         
     }
-    .hebergements{
+
+    .bloc-articles{
         flex-direction: column-reverse;
 
     }
+
+    .popu-list{
+        flex-direction: column
+    }
+    .populaires {
+        border-radius: 0 ;
+        margin-left: 0;
+    }
+    
+    .heberge-marseilles{
+        flex-basis: 100%;
+        background-color: white;
+        border-radius: 0 ;
+        margin-right: 0;
+    }
+    .bloc-img-heberge{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .card img {
+        height: 115px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .afficherplus{
+        display: none;
+    }
+
     .specify{
         min-width: 0;
     }
-    
+    .activ-list{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-activ{
+        flex-direction: column;
+        justify-content: center;
+        margin: 25px;
+
+
+    }
+    .card-activ img{
+        min-height: 115px;
+        width: 100%;
+        object-fit: cover;
+        max-height: 115px;
+    }
+    .activites h3{
+        margin-left: 25px;
+    }
+    footer{
+        flex-direction: column;
+        width: 100%;
+    }
+    footer div{
+        margin-bottom: 10px;
+    }
 }
